@@ -1,0 +1,79 @@
+1. C++程序的模块叫什么？
+
+答：叫函数
+
+
+2. 下面的预处理编译指令是做什么用的？
+#include <iostream>
+
+答：包含iostream模块
+
+答案：这将导致在最终的编译之前，使用iostream文件的内容替换该编译指令。
+
+
+3. 下面的语句是做什么用的？
+using namespace std;
+
+答： 使用命名空间std下的使用变量和方法。
+
+答案：它使得程序可以使用std名称空间中的定义。
+
+
+4. 什么语句可以用来打印"Hello, world", 然后开始新的一行？
+
+答： cout << "Hello, world" << endl;
+
+
+5. 什么语句可以用来创建名为cheeses的整数变量？
+
+答： int cheeses;
+
+
+6. 什么语句可以用来将值32赋给变量cheeses？
+
+答： cheeses = 32;
+
+
+7. 什么语句可以用来将从键盘输入的值读入变量cheeses中？
+
+答：cin >> cheeses;
+
+
+8. 什么语句可以用来打印"We have X varieties of cheeses,", 其中X为变量cheeses的当前值？
+
+答：cout << "We have " << cheeses << "varieties of cheeses\n";
+
+
+9. 下面的函数原型指出了关于函数的哪些信息？
+int froop(double t);
+void rattle(int n);
+int prune(void);
+
+答：
+int froop(double t);
+froop函数接受一个double类型的参数，并返回一个int类型的返回值。
+
+void rattle(int n);
+rattle函数接收一个int类型的参数，没有返回值。
+
+int prune(void);
+prune函数不接收参数，返回一个int类型的返回值。
+
+
+10. 定义函数时，在什么情况下不必使用关键字return？
+
+答：当函数没有返回值的时候，在声明里使用void
+
+答案：当函数的返回类型为void时，不用在函数中使用return。然后，如果不提供返回值，则可以使用它:
+return;
+
+
+11. 假设您编写的main()函数包含如下代码：
+cout << "Please enter your PIN: ";
+而编译器指出cout是一个未知标识符。导致这种问题的原因很可能是什么？指出3种修复这种问题的方法。
+
+答：
+导致这种问题的原因可能是没有使用包含cout的命名空间。
+1、using namespace std;
+2、using std::cout;
+3、std::cout...
