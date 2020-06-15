@@ -1,0 +1,11 @@
+当我将code_14.cpp放在linux上时，提示如下错误：
+test.cpp:14:52: error: in C++98 ‘strs’ must be initialized by constructor, not by ‘{...}’
+     vector<string> strs = {"flower","flow","flight"};
+                                                    ^
+test.cpp:14:52: error: could not convert ‘{"flower", "flow", "flight"}’ from ‘<brace-enclosed initializer list>’ to ‘std::vector<std::basic_string<char> >’
+
+大概意思就是code_14.cpp中含有C++98不支持的语法，但这是可以使用c++11正常执行的代码，经过查找资料发现如下解决方案：
+g++ -std=c++11 test.cpp -o test.exe
+
+通过添加-std=c++11 来指定使用C++11的标准进行编译
+另外在执行test.exe文件时，不能使用test.exe，而需要使用./test.exe
