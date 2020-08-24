@@ -49,12 +49,12 @@ s = "abcabcabcabc"
 # s = 'ababc'
 print(s)
 
-result = repeateSubstringPattern(s)
-print(result)
-
-result_1 = repeateSubstringPattern_1(s)
-print(result_1)
-
-print((s+s).find(s, 1))
-print((s+s).find(s, 1) != len(s))
+# result = repeateSubstringPattern(s)
+# print(result)
+#
+# result_1 = repeateSubstringPattern_1(s)
+# print(result_1)
+#
+# print((s+s).find(s, 1))
+# print((s+s).find(s, 1) != len(s))
 
