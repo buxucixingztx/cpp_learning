@@ -31,14 +31,14 @@ public:
             cout << (*p).first << ": " << (*p).second << endl;
         }
         priority_queue<pair<int, int>, vector<pair<int, int>>, decltype(&cmp) > pq(cmp);
-        for (auto&[num, count]: frequent_dict){
+        for (auto p = frequent_dict.begin(); p != frequent_dict.end(); ++p){
             if (pq.size() == k){
-                if (pq.top().second < count) {
+                if (pq.top().second < (*p).second) {
                     pq.pop();
-                    pq.emplace(num, count);
+                    pq.emplace((*p).first, (*p).second);
                 }
             } else {
-                pq.emplace(num, count);
+                pq.emplace((*p).first, (*p).second);
             }
         }
 
@@ -87,8 +87,10 @@ public:
         for (auto num: nums)
             frequent_dict[num]++;
         vector<pair<int, int>> frequent_list;
-        for (auto &[num, count]: frequent_dict)
-            frequent_list.emplace_back(num, count);
+        // for (auto [num, count]: frequent_dict)
+            // frequent_list.emplace_back(num, count);
+        for (auto p = frequent_dict.begin(); p != frequent_dict.end(); ++p)
+            frequent_list.emplace_back((*p).first, (*p).second);
         vector<int> result;
         int end = nums.size()-1;
         qsort(frequent_list, 0, end, k, result);
