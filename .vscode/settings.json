@@ -9,6 +9,7 @@
         "xutility": "cpp",
         "vector": "cpp",
         "queue": "cpp",
-        "algorithm": "cpp"
+        "algorithm": "cpp",
+        "deque": "cpp"
     }
 }
