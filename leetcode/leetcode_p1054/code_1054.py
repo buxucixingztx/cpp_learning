@@ -6,7 +6,7 @@
 你可以返回任何满足该要求的答案，此题保证存在答案.
 """
 class Solution:
-    def rearrangeBarcodes(self, barcodes: List[int]) -> List[int]:
+    def rearrangeBarcodes(self, barcodes):
         bar_count = dict()
         for bar in barcodes:
             bar_count[bar] = bar_count.get(bar, 0) + 1
